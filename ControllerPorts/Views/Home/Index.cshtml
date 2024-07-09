@@ -1,0 +1,96 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>COM Port Connection</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/3.1.18/signalr.min.js"></script>
+    <link href="~/css/site.css" resource="stylesheet" />
+    <link href="~/js/site.js" />
+</head>
+<body>
+    <div class="container">
+        <div class="allOutput">
+            <div class="outputDate">
+                <div class="onceBlock">
+                    <p>Давление:</p>
+                    <textarea id="pressure"></textarea>
+                </div>
+                <div class="onceBlock">
+                    <p>Температура:</p>
+                    <textarea id="temperature"></textarea>
+                </div>
+            </div>
+            <div class="statusBlock">
+                <p>Строка состояния:</p>
+                <textarea id="output"></textarea>
+            </div>
+        </div>
+        <div class="setting_form">
+            <h1> Настройки порта </h1>
+            <div class="comboBox">
+                <label for="portName">Выбор порта:</label>
+                <select id="portName" name="portName">
+                    <option value="COM1">COM1</option>
+                    <option value="COM2">COM2</option>
+                    <option value="COM3">COM3</option>
+                    <option value="COM4">COM4</option>
+                    <option value="COM5">COM5</option>
+                    <option value="COM6">COM6</option>
+                    <option value="COM7">COM7</option>
+                    <option value="COM8">COM8</option>
+                    <option value="COM9">COM9</option>
+                    <option value="COM10">COM10</option>
+                </select>
+            </div>
+            <div class="comboBox">
+                <label for="baudRate">Бит в секунду:</label>
+                <select id="baudRate" name="baudRate">
+                    <option value="9600">9600</option>
+                    <option value="19200">19200</option>
+                    <option value="115200">115200</option>
+                </select>
+            </div>
+            <div class="comboBox">
+                <label for="dataBits">Биты данных:</label>
+                <select id="dataBits" name="dataBits">
+                    <option value="8">8</option>
+                    <option value="5">5</option>
+                    <option value="7">7</option>
+                </select>
+            </div>
+            <div class="comboBox">
+                <label for="parity">Четность:</label>
+                <select id="parity" name="parity">
+                    <option value="None">None</option>
+                    <option value="Odd">Odd</option>
+                    <option value="Even">Even</option>
+                    <option value="Mark">Mark</option>
+                    <option value="Space">Space</option>
+                </select>
+            </div>
+            <div class="comboBox">
+                <label for="stopBits">Стоповые биты:</label>
+                <select id="stopBits" name="stopBits">
+                    <option value="1">1</option>
+                    <option value="1,5">1,5</option>
+                    <option value="2">2</option>
+                </select>
+            </div>
+            <div class="comboBox">
+                <label for="handshake">Управление потоком:</label>
+                <select id="handshake" name="handshake">
+                    <option value="None">None</option>
+                    <option value="XOnXOff">XOnXOff</option>
+                    <option value="RequestToSend">RequestToSend</option>
+                    <option value="RequestToSendXOnXOff">RequestToSendXOnXOff</option>
+                </select>
+            </div>
+            <div class="btn">
+                <button type="button" onclick="disconnectFromComPort()">Отключиться</button>
+                <button type="button" onclick="connectToComPort()">Подключиться</button>
+                <button type="button" onclick="clearOutput()">Очистить поля </button>
+            </div>
+        </div>
+</body>
+</html>

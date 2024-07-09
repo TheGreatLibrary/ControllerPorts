@@ -1,0 +1,98 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px 400px;
+}
+
+.container {
+    display: flex;
+    gap: 50px;
+}
+
+/* Все места с textarea*/
+
+.allOutput {
+    width: 500px;
+}
+
+    .allOutput p {
+        margin: 15px 0;
+    }
+
+    .allOutput textarea {
+        resize: none;
+        height: 150px;
+        width: 100%;
+        overflow-y: scroll;
+    }
+
+/* 2 контейнера с выходными данными */
+
+.outputDate {
+    display: flex;
+    gap: 30px;
+    margin-top: 32px;
+}
+
+.onceBlock {
+    display: block;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+    .onceBlock textarea {
+        height: 250px;
+        width: 100%;
+    }
+
+/* Блок настроек */
+.setting_form {
+    width: 500px;
+    margin-top: 40px;
+    margin-right: 40px;
+    box-sizing: border-box;
+}
+
+    .setting_form h1 {
+        margin: 0 0 40px 80px;
+    }
+
+.comboBox {
+    gap: 20px;
+    text-align: right;
+    margin-bottom: 25px;
+}
+
+    .comboBox select {
+        min-width: 200px;
+    }
+
+.setting_form p {
+    color: rgb(60, 59, 61);
+    font-size: 15px;
+}
+
+.btn {
+    margin-top: 60px;
+    padding-left:40px;
+    display: flex;
+    gap: 20px;
+}
+
+    .btn button {
+        background-color: #297fcf;
+        color: #fff;
+        font-size: 15px;
+        font-weight: 600;
+        border: none;
+        width: 33%;
+        height: 50px;
+        border-radius: 30px;
+        transition: 0.1s;
+    }
+
+
+        .btn button:hover {
+            background-color: #75c0ff;
+            color: white;
+        }
